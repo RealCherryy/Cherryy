@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    color:white;
+    min-height:100vh;
+    background:
+    radial-gradient(circle at top,rgba(255,40,40,.15),transparent 40%),
+    radial-gradient(circle at bottom right,rgba(255,0,0,.1),transparent 35%),
+    #090909;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#090909;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#333;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff2b2b;
+}
+
+
+/* Header */
+
+header{
+    width:min(900px,90%);
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+
+header h1{
+    font-size:clamp(3rem,6vw,4.5rem);
+    font-weight:800;
+    margin-bottom:30px;
+}
+
+
+header img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #ff2b2b;
+    box-shadow:
+    0 0 30px rgba(255,0,0,.4);
+    margin-bottom:30px;
+    transition:.3s;
+}
+
+
+header img:hover{
+    transform:scale(1.05);
+}
+
+
+header p{
+    max-width:650px;
+    color:#bbb;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+
+/* Navigation */
+
+nav{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+
+nav a{
+    color:white;
+    text-decoration:none;
+    background:#151515;
+    border:1px solid #292929;
+    padding:13px 28px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+
+nav a:hover{
+    background:#ff2b2b;
+    border-color:#ff2b2b;
+    transform:translateY(-4px);
+}
+
+
+
+/* Main */
+
+.showcase{
+    width:min(900px,90%);
+    margin:0 auto 100px;
+    animation:fadeUp .8s ease;
+}
+
+
+.showcase h2{
+    text-align:center;
+    font-size:clamp(2rem,4vw,3rem);
+    margin-bottom:10px;
+}
+
+
+.subtitle{
+    text-align:center;
+    color:#aaa;
+    margin-bottom:45px;
+}
+
+
+
+/* Form */
+
+.contact-form{
+
+    background:#111;
+    border:1px solid #222;
+    border-radius:22px;
+    padding:40px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.5);
+}
+
+
+
+.input-group{
+
+    display:flex;
+    flex-direction:column;
+    margin-bottom:25px;
+
+}
+
+
+
+.input-group label{
+
+    font-size:.95rem;
+    font-weight:600;
+    margin-bottom:10px;
+    color:#ddd;
+
+}
+
+
+
+input,
+select,
+textarea{
+
+    width:100%;
+    background:#0b0b0b;
+    border:1px solid #292929;
+
+    color:white;
+    padding:15px;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-family:"Poppins",sans-serif;
+
+    transition:.3s;
+
+}
+
+
+
+textarea{
+    resize:none;
+}
+
+
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#666;
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:#ff2b2b;
+
+    box-shadow:
+    0 0 15px rgba(255,0,0,.25);
+
+}
+
+
+
+select option{
+
+    background:#111;
+
+    color:white;
+
+}
+
+
+
+/* Button */
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff2b2b;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+    background:#ff4040;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 30px rgba(255,0,0,.35);
+
+}
+
+
+
+/* Footer */
+
+footer{
+
+    width:min(900px,90%);
+
+    margin:auto;
+
+    text-align:center;
+
+    color:#777;
+
+    padding:40px 0;
+
+}
+
+
+
+/* Animation */
+
+
+@keyframes fadeUp{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+
+
+/* Tablet */
+
+
+@media(max-width:800px){
+
+    header{
+
+        min-height:75vh;
+
+    }
+
+
+    .contact-form{
+
+        padding:25px;
+
+    }
+
+
+}
+
+
+
+/* Phone */
+
+
+@media(max-width:600px){
+
+
+    header img{
+
+        width:150px;
+        height:150px;
+
+    }
+
+
+    nav{
+
+        flex-direction:column;
+        width:100%;
+
+    }
+
+
+    nav a{
+
+        width:220px;
+
+    }
+
+
+    .contact-form{
+
+        padding:20px;
+
+    }
+
+
+    .showcase{
+
+        margin-bottom:60px;
+
+    }
+
+
+}
